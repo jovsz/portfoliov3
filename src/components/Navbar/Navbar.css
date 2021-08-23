@@ -4,6 +4,20 @@
     display: flex;
     align-items: center;
     font-size: 1.2rem;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 1;
+}
+
+.NavbarItems > h1 {
+    cursor: pointer;
+}
+
+.sticky-nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar-logo {
@@ -53,9 +67,14 @@
     display: none;
 }
 
+.scrolling {
+    background-color: #7577fa;
+    transition: all 0.5s ease;
+}
+
 @media screen and (max-width: 960px){
     .NavbarItems {
-        position: relative;
+        position: fixed;
     }
 
     .nav-menu {

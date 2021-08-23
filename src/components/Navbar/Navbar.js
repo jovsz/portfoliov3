@@ -4,6 +4,10 @@ import './Navbar.css';
 
 class Navbar extends Component {
     state = { clicked: false}
+    
+    toTheTop =()=> {
+        window.scrollTo({ top:0, left: 0, behavior: 'smooth'});
+    }
 
     handleClick = () => {
         this.setState({clicked: !this.state.clicked});
@@ -11,8 +15,8 @@ class Navbar extends Component {
 
     render() {
         return(
-            <nav className="NavbarItems">
-                <h1 className="navbar-logo">PortFolio Jovanny<i className="fab fa-react"></i></h1>
+            <nav className="NavbarItems sticky-nav">
+                <h1 onClick={this.toTheTop} className="navbar-logo">PortFolio Jovanny<i className="fab fa-react" ></i></h1>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
