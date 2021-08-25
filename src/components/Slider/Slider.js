@@ -6,26 +6,27 @@ import Slide from './Slide';
 
 
 const Slider = () => {
+    
+
     return (
         <div className="carousel-container">
             <div className="carousel-title">
                 <h2>My Projects</h2>
             </div>
             <Carousel
-                plugins={['arrows']}
-                slidesPerPage={3}
+                plugins={['arrows', 'infinite','centered', 'autoPlay']}
+                slidesPerPage={2}
+                
                 animationSpeed={200}
-                centered={true}
-                offset={1}
-                itemWidth={400}
+                offset={20}
+                itemWidth={425}
                 slides={Slide}
                 breakpoints={{
                     960: {
                         slidesPerPage: 1,
                         arrows: false,
                         offset: 1,
-                        centered: true,
-                        itemWidth: 680,
+                        itemWidth: 250,
                     },
                 }}
             />   

@@ -1,20 +1,22 @@
 .about-container {
     display: flex;
+    position: relative;
     background-color: white;
     color: #141414;
     height: 70vh;
-    padding: 100px 0 100px 0;
+    padding: 0;
     width: 100%;
-    border: 1px solid;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
 .about-desc{
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
-    width: 55%;
+    width: 80%;
     padding: 0 100px 0 100px
 }
 
@@ -29,12 +31,16 @@ about-desc > p {
 
 .about-img > img {
     width: 600px;
+    padding-right:20px;
     background-size: cover;
-    display: flex;
-    align-self: center;
+    position: relative;
     overflow: hidden;
 }
 
 .about-desc > p {
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
 }
