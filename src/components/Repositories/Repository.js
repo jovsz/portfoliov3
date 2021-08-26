@@ -1,15 +1,14 @@
 import React from 'react';
-import { List, Card } from 'semantic-ui-react';
+import { List, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
-import { VscGithubInverted } from 'react-icons/vsc';
+
 
 const Repository = (props) => {
     return(
-        <div className="repos">
-          <List divided relaxed>
+          <List className="list-repos" divided relaxed>
              {props.repository.map((repos) => (
                     <List.Item>
-                        <List.Icon name='github' size='large' verticalAlign='middle' />
+                        <Icon name='github' />
                         <List.Content>
                             <List.Header as='a' href={repos.html_url} target='_blank'>{repos.name}</List.Header>
                             <List.Description as='a'>Updated 10 mins ago</List.Description>
@@ -17,7 +16,6 @@ const Repository = (props) => {
                     </List.Item>           
                 ))}
             </List>            
-        </div>
     );
 }
 

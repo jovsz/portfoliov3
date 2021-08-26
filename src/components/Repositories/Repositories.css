@@ -14,17 +14,18 @@
     padding-left: 30px;
 }
 
-.repos {
-    position: relative;
-    top: 100px;
-    width: 400px;
-    height: 550px;
-    overflow: auto;
-}
+
 .github-container {
     display:flex;
     
 }
+
+.list-repos {
+    height: 520px;
+    width: 600px;
+    overflow: auto;
+}
+
 @media screen and (max-width: 928px) {
     .repository-container{
         display:flex;
