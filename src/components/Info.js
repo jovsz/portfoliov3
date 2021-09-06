@@ -6,17 +6,18 @@ export const infoEnglish = {
     title: 'Hellow World, Welcome to My portFolio',
     location: 'Based in Tijuana, Baja California North, Mx.',
     aboutMe: 'I am a very enthusiastic person for technology, I am currently studying full stack web development, I like to work in a team and share ideas openly with everyone',
-    knowledge: 'At the moment the technologies that I have learned throughout the course have been HTML, CSS and Javascript. Mainly javascript since I have managed to complement it with the React and Node.js'
-}
+    knowledge: 'At the moment the technologies that I have learned throughout the course has been HTML, CSS and Javascript. Mainly javascript since I have managed to complement it with the React and Node.js',
+    experience: 'My Principal lenguages of programming are javascript, java and C#, also I have experience with DataBases engine as MySQL, MariaDb and PostgreSQL'
+};
 
 export const infoSpanish = {
     title: 'Hola Mundo, Bienvenidos de mi portafolio',
     aboutMe: 'I am a very enthusiastic person for technology, I am currently studying full stack web development, I like to work in a team and share ideas openly with everyone',
     knowledge: 'At the moment the technologies that I have learned throughout the course have been HTML, CSS and Javascript. Mainly javascript since I have managed to complement it with the React and Node.js'
-}
+};
 
 export const socialUrls = {
     linkedin: 'https://www.linkedin.com/in/jovanny-fuentes-289650210/',
     github: 'https://github.com/jovsz',
     twitter: 'https://twitter.com/jvz05035592'
-}
+};

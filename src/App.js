@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Section from './components/Section/Section';
 import About from './components/About/About';
-import Slider from './components/Slider/Slider';
+import Slidehow from './components/Slider/Slider';
 import Footer from './components/Footer/Footer';
 import GithubProfile from './components/Repositories/GithubProfile';
 
@@ -26,7 +26,7 @@ function App() {
       <Section />
       <About />
       <GithubProfile />
-      <Slider />
+      <Slidehow />
 
       <Footer />
     </div>

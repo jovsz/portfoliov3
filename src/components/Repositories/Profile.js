@@ -6,7 +6,6 @@ import './Profile.css';
 const Profile = (props) => {
     const [dataFollower, setDataFollower] = useState([]);
     const [dataFollowing, setDataFollowing] = useState([]);
-    const [dataAvatar, setDataAvatar] = useState('');
 
     const getFollowing = async() => {
         await fetch(apiFollowers)
@@ -18,14 +17,6 @@ const Profile = (props) => {
             console.log(err.message);
         })
     };
-
-    const getAvatar = async() => {
-        await fetch(apiAvatar)
-        .then((res) => res.json())
-        .then((json) => {
-            setDataAvatar(json);
-        })
-    }
 
     const getFollower = async() => {
         await fetch(apiFollowing)
@@ -39,43 +30,42 @@ const Profile = (props) => {
     useEffect(() => {
         getFollower();
         getFollowing();
-        getAvatar();
     },[]);
     
     return(
-        <Card>
-             <Image src={dataAvatar} wrapped ui={false} />
-            <Card.Content>
-                <Card.Header>{props.nickName}</Card.Header>
-                <Card.Header>{props.fullName}</Card.Header>
-                <Card.Meta>
-                    <span className='date'>Joined in 2015</span>
-                </Card.Meta>
-                <Card.Description>
-                    Matthew is a musician living in Nashville.
-                </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-                <p>
-                    <Icon name='users' />
-                    {props.repos.length} Repositories
-                </p>
-            </Card.Content>
-            <Card.Content extra>
-                <p>
-                    <Icon name='users' />
-                    {dataFollower.length} Followers
-                </p>
-            </Card.Content>
-            <Card.Content extra>
-                <p>
-                    <Icon name='user' />
-                    {dataFollowing.length} Friends
-                </p>
-            </Card.Content>
-        </Card>
-            
-        
+        <div className="Github-container">
+            <Card>
+                <Image src={props.avatar} wrapped ui={false} />
+                <Card.Content>
+                    <Card.Header>{props.fullName}</Card.Header>
+                    <Card.Header >{props.nickName}</Card.Header>
+                    <Card.Meta>
+                        <span className='date'>Joined in 2020</span>
+                    </Card.Meta>
+                    <Card.Description>
+                    All our dreams can come true, if we have the courage to pursue them.
+                    </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                    <p>
+                        <Icon name='zip' />
+                        {props.repos.length} Repositories
+                    </p>
+                </Card.Content>
+                <Card.Content extra>
+                    <p>
+                        <Icon name='users' />
+                        {dataFollower.length} Followers
+                    </p>
+                </Card.Content>
+                <Card.Content extra>
+                    <p>
+                        <Icon name='user' />
+                        {dataFollowing.length} Friends
+                    </p>
+                </Card.Content>
+            </Card>
+        </div>
     );
 }
 

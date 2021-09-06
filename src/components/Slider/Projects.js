@@ -1,4 +1,3 @@
-import React from 'react'
 import proyect_1 from './Media/project_1.png'
 import proyect_2 from './Media/project_2.png'
 import proyect_3 from './Media/project_3.png'
@@ -9,11 +8,11 @@ import proyect_7 from './Media/project_7.png'
 import proyect_8 from './Media/project_8.png'
 import proyect_9 from './Media/project_9.png'
 import proyect_10 from './Media/project_10.png'
-import './Slider.css'
 
 
 
-const slidesInfo = [
+
+export const projects = [
     {
         src: proyect_1,
         alt: 'To Do List',
@@ -75,16 +74,3 @@ const slidesInfo = [
         desc: 'This is a simple app, its principal function is display the movie that you search coming from an API and then you have the option to add as favorite or delete it',
     },
 ];
-
-const slides = slidesInfo.map(slide =>(
-    <div className='slide-container'>
-        <a href={slide.url} rel="noreferrer" target='_blank'>
-        <img src={slide.src} alt={slide.alt} /></a>
-        <div className='slide-desc'>
-            <span>{slide.desc}</span>
-        </div>
-        
-    </div>
-));
-
-export default  slides;

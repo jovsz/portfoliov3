@@ -13,6 +13,7 @@ const GithubProfile = () => {
         .then((res) => res.json())
         .then((json) => {
             setDataRepos(json)
+            console.log(json)
         }).catch((err) => {console.log(err.message)});
     }
 
@@ -34,7 +35,7 @@ const GithubProfile = () => {
         <div className="repository-container">
             <h2>Github Repositories</h2>
             <div className='github-container'>
-                <Profile nickName={data.login} fullName={data.name} url={data.url} repos={dataRepository} />
+                <Profile nickName={data.login} fullName={data.name} url={data.url} avatar={data.avatar_url} repos={dataRepository} />
                 <Repository repository={dataRepository} />
             </div> 
         </div>

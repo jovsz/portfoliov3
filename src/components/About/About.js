@@ -9,6 +9,8 @@ export const About = () => {
             <div className="about-desc">
                 <h3>Let me tell you something about me</h3>
                 <p>{infoEnglish.aboutMe}</p>
+                <p>{infoEnglish.knowledge}</p>
+                <p>{infoEnglish.experience}</p>
             </div>
             <div className="about-img">
                 <img src={aboutPicture} alt="about"/>
