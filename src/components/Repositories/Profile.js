@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import {apiFollowers, apiFollowing, apiAvatar} from './Api';
+import {apiFollowers, apiFollowing } from './Api';
 import { Card, Icon, Image } from 'semantic-ui-react'
 import './Profile.css';
 

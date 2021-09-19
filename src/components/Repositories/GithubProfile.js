@@ -33,10 +33,12 @@ const GithubProfile = () => {
 
     return(
         <div className="repository-container">
-            <h2>Github Repositories</h2>
-            <div className='github-container'>
-                <Profile nickName={data.login} fullName={data.name} url={data.url} avatar={data.avatar_url} repos={dataRepository} />
-                <Repository repository={dataRepository} />
+            <div className='d-flex flex-row justify-content-around'>
+                <div><h2>Github Repositories</h2></div>
+                <div className='github-container'>
+                    <Profile nickName={data.login} fullName={data.name} url={data.url} avatar={data.avatar_url} repos={dataRepository} />
+                    <Repository repository={dataRepository} />
+                </div>
             </div> 
         </div>
     )

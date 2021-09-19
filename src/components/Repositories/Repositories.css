@@ -2,11 +2,12 @@
     background-color: white;
     position: relative;
     display: flex;
+    height: 100vh;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
-    margin: 100px 0
+
 }
 
 .github-container {
@@ -25,6 +26,19 @@
     width: 600px;
     overflow: auto;
 }
+@media screen and (max-width: 928px) {
+    .repository-container{
+        display:flex;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 100px;
+        height: 100%;
+        padding: 20px;
+    }
+}
 
 @media screen and (max-width: 879px) {
     .github-container {
@@ -35,15 +49,7 @@
 }
 
 
-@media screen and (max-width: 928px) {
-    .repository-container{
-        display:flex;
-        flex-direction: column;
-        padding: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-}
+
 
 @media  screen and (max-width: 500px) {
     .list-repos{
